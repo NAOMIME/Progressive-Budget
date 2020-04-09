@@ -5,7 +5,18 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'public/*'\" \"npm run public\"",
+
+    "install": "cd public && npm start",
+    "build": "cd public && npm run build",
+    "heroku-postbuild": "npm run build"
+
+
+
+    
   },
   "repository": {
     "type": "git",
@@ -17,7 +28,11 @@
     "url": "https://github.com/coding-boot-camp/unit18hw/issues"
   },
   "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
+
+
   "dependencies": {
+
+    
     "express": "^4.17.1",
     "mongoose": "^5.5.15"
   }
