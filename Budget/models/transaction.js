@@ -1,9 +1,17 @@
+
+
+
 const mongoose = require("mongoose");
+
+
+
 
 const Schema = mongoose.Schema;
 
 const transactionSchema = new Schema({
-  name: {
+  name: 
+  
+  {
     type: String,
     trim: true,
     required: "Enter a name for transaction"
@@ -17,6 +25,7 @@ const transactionSchema = new Schema({
     default: Date.now
   }
 });
+
 
 const Transaction = mongoose.model("Transaction", transactionSchema);
 
